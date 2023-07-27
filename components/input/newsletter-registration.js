@@ -8,10 +8,6 @@ function NewsletterRegistration() {
 
     const email = emailInputRef.current.value;
 
-    if (!email || !email.include("@")) {
-      return;
-    }
-
     fetch("/api/newsletter", {
       method: "POST",
       body: JSON.stringify({ email: email }),
